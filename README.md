@@ -1,0 +1,1 @@
+Hi this a random number generator app , made with Uncle's Bob clean architecture , Provider for state management , using adaptive ui , 
