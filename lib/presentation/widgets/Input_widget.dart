@@ -23,7 +23,7 @@ class InputWidget extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         floatingLabelStyle: const TextStyle(
-          color: Colors.blue,
+          color: Colors.deepPurpleAccent,
           fontSize: 14.0,
           fontWeight: FontWeight.bold,
         ),

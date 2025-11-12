@@ -38,18 +38,18 @@ class _ResultAlertDialogState extends State<ResultAlertDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Stack(
       alignment: Alignment.topCenter,
       children: [
         AlertDialog(
-          backgroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          title: const Text(
+          title: Text(
             '🎉 Success!',
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.indigo),
+            style: theme.textTheme.titleLarge?.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
           ),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -57,22 +57,23 @@ class _ResultAlertDialogState extends State<ResultAlertDialog> {
               Text(
                 'The random number between ${widget.min} and ${widget.max} is:',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                style: theme.textTheme.bodyLarge,
               ),
               const SizedBox(height: 16),
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.indigo.shade50,
+                  color: Colors.deepPurple.shade50,
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.indigo.shade300),
+                  border: Border.all(color: Colors.deepPurple.shade300),
                 ),
                 child: Text(
                   '${widget.result}',
-                  style: const TextStyle(
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
                     fontSize: 48,
                     fontWeight: FontWeight.w900,
-                    color: Colors.indigo,
+                    color: theme.colorScheme.primary,
                   ),
                 ),
               ),
@@ -81,14 +82,7 @@ class _ResultAlertDialogState extends State<ResultAlertDialog> {
           actions: [
             TextButton(
               onPressed: () => Navigator.of(context).pop(),
-              child: const Text(
-                'Close',
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.indigo,
-                ),
-              ),
+              child: const Text('Close'),
             ),
           ],
         ),
@@ -110,7 +104,6 @@ class _ResultAlertDialogState extends State<ResultAlertDialog> {
             Colors.yellow,
           ],
         ),
-        
       ],
     );
   }

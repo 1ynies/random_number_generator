@@ -19,9 +19,9 @@ class RandomNumberGenerationScreen extends StatelessWidget {
     // Validate inputs
     final validationError = inputProvider.getValidationError();
     if (validationError != null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(validationError), backgroundColor: Colors.red),
-      );
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(validationError)));
       return;
     }
 
@@ -35,12 +35,9 @@ class RandomNumberGenerationScreen extends StatelessWidget {
     // Check for errors
     if (randomNumberProvider.error != null) {
       if (context.mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(randomNumberProvider.error!),
-            backgroundColor: Colors.red,
-          ),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(randomNumberProvider.error!)));
       }
       return;
     }
@@ -62,25 +59,20 @@ class RandomNumberGenerationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final inputProvider = Provider.of<InputProvider>(context);
     final randomNumberProvider = Provider.of<RandomNumberProvider>(context);
+    final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Random Number Generator"),
-        backgroundColor: Colors.indigo,
-        foregroundColor: Colors.white,
-      ),
+      appBar: AppBar(title: const Text("Random Number Generator")),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
+            Text(
               'Enter Range',
-              style: TextStyle(
-                fontSize: 24,
+              style: theme.textTheme.headlineSmall?.copyWith(
                 fontWeight: FontWeight.bold,
-                color: Colors.indigo,
               ),
               textAlign: TextAlign.center,
             ),
@@ -100,7 +92,6 @@ class RandomNumberGenerationScreen extends StatelessWidget {
                 : GenerateButtonWidget(
                     text: 'Generate Random Number',
                     onPressed: () => _generateRandomNumber(context),
-                    backgroundColor: Colors.indigo,
                   ),
           ],
         ),
