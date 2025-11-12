@@ -5,13 +5,13 @@ A beautiful Flutter application that generates random numbers within a specified
 ## 📱 Screenshots
 
 <!-- Add your screenshots here -->
-<p align="center">
-  <img src="" width="250" alt="Home Screen"/>
-  <img src="lib/ScreenShots/screenshot-1.jpg" width="250" alt="Home page"/>
-  <img src="lib/ScreenShots/screenshot-2.jpg" width="250" alt="Input validation"/>
-  <img src="lib/ScreenShots/screenshot-3.jpg" width="250" alt="Result with Confetti"/>
-  <img src="lib/ScreenShots/screenshot-4.jpg" width="250" alt="Result with Confetti"/>
-</p>
+<div align="center">
+  
+  <img src="lib/ScreenShots/screenshot-1.jpg" width="200" alt="Home page"/>
+  <img src="lib/ScreenShots/screenshot-2.jpg" width="200" alt="Input validation"/>
+  <img src="lib/ScreenShots/screenshot-3.jpg" width="200" alt="Result with Confetti"/>
+  <img src="lib/ScreenShots/screenshot-4.jpg" width="200" alt="Result with Confetti"/>
+</div>
 
 ## ✨ Features
 
