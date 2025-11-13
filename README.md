@@ -1,12 +1,15 @@
 # 🎲 Random Number Generator
 
+
+<img src="lib/presentation/assets/images/Applogo.jpg" width="100" alt="App logo">
 A beautiful Flutter application that generates random numbers within a specified range, built with Clean Architecture principles and featuring a stunning UI with confetti animations.
 
 ## 📱 Screenshots
 
 <!-- Add your screenshots here -->
+
 <div align="center">
-  <img src="lib/presentation/assets/images/Applogo.jpg" width="200" alt="App logo">
+  
   <img src="lib/ScreenShots/screenshot-1.jpg" width="200" alt="Home page"/>
   <img src="lib/ScreenShots/screenshot-2.jpg" width="200" alt="Input validation"/>
   <img src="lib/ScreenShots/screenshot-3.jpg" width="200" alt="Result with Confetti"/>
